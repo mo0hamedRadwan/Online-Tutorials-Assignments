@@ -1,0 +1,32 @@
+<!-- https://www.jqueryscript.net/other/Stylish-jQuery-Images-Comparison-Plugin-twentytwenty.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="twentytwenty.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Comparison Slider</title>
+</head>
+<body>
+    <div class="parent">
+        <img class="image1" src="imgs/image.jpg" alt="">
+        <img class="image2" src="imgs/image.jpg" alt="">
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="jquery.event.move.js"></script>
+    <script src="jquery.twentytwenty.js"></script>
+
+    <!-- Jquery Code -->
+    <script>
+        $(document).ready(function(){
+            $(".parent[data-orientation != 'vertical']").twentytwenty({default_offset_pct:0.5})
+        });
+    </script>
+
+</body>
+</html>
+<!-- invert -->

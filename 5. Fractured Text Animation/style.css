@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 800px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: #fcff8a;
+    font-family: "arial black";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent ul{
+    list-style: none;
+}
+
+.parent ul li{
+    display: inline-block;
+    font-size: 100px;
+    color: transparent;
+    position: relative;
+}
+
+.parent ul li::before,
+.parent ul li::after{
+    content: attr(data-title);
+    color: #262626;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* overflow: hidden; */
+}
+
+.parent ul li:nth-child(odd)::before{
+    -webkit-clip-path : polygon(55% 0 , 0 0 , 0 100% , 35% 100%);
+    clip-path : polygon(55% 0 , 0 0 , 0 100% , 35% 100%);
+    top: -5px;
+    left: -2px;
+}
+
+.parent ul li:nth-child(odd)::after{
+    -webkit-clip-path : polygon(55% 0 , 100% 0 , 100% 100% , 35% 100%);
+    clip-path : polygon(55% 0 , 100% 0 , 100% 100% , 35% 100%);
+    top: 0px;
+    left: 0px;
+}
+
+.parent ul li:nth-child(even)::before{
+    -webkit-clip-path : polygon(25% 0 , 0 0 , 0 100% , 75% 100%);
+    clip-path : polygon(25% 0 , 0 0 , 0 100% , 75% 100%);
+    top: 5px;
+    left: -2px;
+}
+
+.parent ul li:nth-child(even)::after{
+    -webkit-clip-path : polygon(25% 0 , 100% 0 , 100% 100% , 75% 100%);
+    clip-path : polygon(25% 0 , 100% 0 , 100% 100% , 75% 100%);
+    top: 0px;
+    left: 0px;
+}
+
+.parent ul li:nth-child(odd){
+    animation: animateOdd 2s linear infinite;
+}
+
+.parent ul li:nth-child(even){
+    animation: animateEven 2s linear infinite;
+}
+
+@keyframes animateEven {
+    0%{
+        transform: rotate(15deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes animateOdd {
+    0%{
+        transform: rotate(-15deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(15deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-15deg);
+    }
+}
