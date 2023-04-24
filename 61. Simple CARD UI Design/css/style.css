@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto 0;
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    perspective: 500px;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.box:hover img{
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+.box h2{
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: #FFF;
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: rotateX(110deg);
+    transition: 0.5s;
+}
+
+.box:hover h2{
+    transition-delay: 0.2s;
+    transform: rotateX(0deg);
+}
+
+.box ul.social{
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.social li{
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #FFF;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(90deg);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover .social li{
+    transform: rotateX(0deg);
+}
+
+.social li:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.box:hover .social li.facebook{transition-delay: 0.6s;}
+
+.box:hover .social li.twitter{transition-delay: 0.8s;}
+
+.box:hover .social li.google{transition-delay: 1.0s;}
+
+.box:hover .social li.linkedin{transition-delay: 1.2s;}
+
+.box:hover .social li.instagram{transition-delay: 1.4s;}
+
+
+
+.social li.facebook:hover{background-color: #1877F2;}
+
+.social li.twitter:hover{background-color: #1DA1F2;}
+
+.social li.google:hover{background-color: #dd4b39;}
+
+.social li.linkedin:hover{background-color: #0A66C2;}
+
+.social li.instagram:hover{background-color: #e4405f;}

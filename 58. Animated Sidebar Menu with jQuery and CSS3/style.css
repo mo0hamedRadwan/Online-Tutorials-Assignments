@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 600px;
+    height: 600px;
+    margin: 30px auto 0;
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.parent .sidebar{
+    width: 200px;
+    height: 100%;
+    background-color: #262626;
+    position: relative;
+    transition: 0.5s;
+}
+
+.sidebar ul.menu{
+    list-style: none;
+}
+
+.sidebar .menu li{
+    padding: 20px 60px;
+    color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.sidebar .sidebarBtn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.sidebar .sidebarBtn span{
+    width: 35px;
+    height: 5px;
+    background-color: #262626;
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    transition: 0.5s;
+}
+
+.sidebarBtn span::before,
+.sidebarBtn span::after{
+    content: "";
+    width: 35px;
+    height: 5px;
+    background-color: #262626;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.sidebarBtn span::before{
+    top: -10px;
+    left: 0;
+}
+
+.sidebarBtn span::after{
+    top: 10px;
+    left: 0;
+}
+
+.hide{
+    transform: translateX(-100%);
+}
+
+.sidebar .menu li:hover{
+    background-color: #464646;
+    cursor: pointer;
+}

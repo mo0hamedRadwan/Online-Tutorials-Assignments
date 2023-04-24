@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 700px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: #262626;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent ul.menu{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu li{
+    display: block;
+    font-size: 24px;
+    padding: 10px 20px;
+    /* border: 1px solid red; */
+    position: relative;
+    transition: 0.5s;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu li::before,
+.menu li a::before,
+.menu li::after,
+.menu li a::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu li::before{
+    top: 10px;
+    left: 20px;
+    border-top: 2px solid yellow;
+    border-left: 2px solid yellow;
+}
+
+.menu li a::before{
+    top: 10px;
+    right: 20px;
+    border-top: 2px solid yellow;
+    border-right: 2px solid yellow;
+}
+
+.menu li::after{
+    bottom: 10px;
+    left: 20px;
+    border-bottom: 2px solid yellow;
+    border-left: 2px solid yellow;
+}
+
+.menu li a::after{
+    bottom: 10px;
+    right: 20px;
+    border-bottom: 2px solid yellow;
+    border-right: 2px solid yellow;
+}
+
+.menu li:hover{
+    color: yellow;
+}
+
+.menu li:hover::before,
+.menu li:hover a::before,
+.menu li:hover::after,
+.menu li:hover a::after{
+    opacity: 1;
+}
+
+.menu li:hover::before{
+    top: 0px;
+    left: 0px;
+}
+
+.menu li:hover a::before{
+    top: 0px;
+    right: 0px;
+}
+
+.menu li:hover::after{
+    bottom: 0px;
+    left: 0px;
+}
+
+.menu li:hover a::after{
+    bottom: 0px;
+    right: 0px;
+}
