@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 400px;
+    height: 500px;
+    margin: 50px auto;
+    background-color: #CCC;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent h1{
+    font-size: 80px;
+    color: #999;
+    transform-origin: bottom;
+    transform: skew(45deg);
+    position: relative;
+}
+
+.parent h1::before{
+    content: attr(data-text);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    transform: skew(-45deg);
+}

@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: #CCC;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent h2{
+    font-size: 40px;
+    color: #6d6de4;
+    position: relative;
+}
+
+.parent h2::before{
+    content: attr(data-text);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    animation: multiColor 2s linear infinite;
+}
+
+@keyframes multiColor {
+    0%{
+        height: 0%;
+    }
+    20%{
+        height: 40%;
+    }
+    40%{
+        height: 70%;
+    }
+    60%{
+        height: 50%;
+    }
+    80%{
+        height: 30%;
+    }
+    100%{
+        height: 10%;
+    }
+}

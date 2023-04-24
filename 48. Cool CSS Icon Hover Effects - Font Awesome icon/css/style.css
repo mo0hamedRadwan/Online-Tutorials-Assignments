@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 700px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: #262626;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent ul.icons{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons li{
+    display: inline-block;
+    width: 100px;
+    font-size: 30px;
+    color: white;
+    /* border: 1px solid red; */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.icons li .text{
+    font-size: 20px;
+    margin: 15px 0 0 100px;
+    transition: 0.5s;
+}
+
+.icons li:hover{
+    cursor: pointer;
+}
+
+.icons li:hover .text{
+    margin: 15px 0 0 0;
+}

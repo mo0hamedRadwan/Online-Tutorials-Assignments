@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 500px;
+    height: 400px;
+    margin: 50px auto;
+}
+
+.container{
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+    perspective: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .text{
+    height: 100%;
+    width: 50%;
+    padding : 40px 30px;
+    transform: rotateY(120deg);
+    transform-origin: 0% 50%;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.container .text h2{
+    margin-bottom: 20px;
+}
+
+.container .text p{
+    line-height: 1.5;
+}
+
+.container .image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.container .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.container:hover .text{
+    transform: rotateY(0deg);
+}
+
+.container:hover .image{
+    left: 50%;
+}

@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 500px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: #CCC;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent h2{
+    position: relative;
+}
+
+.parent h2::before{
+    content: "c++";
+    position: absolute;
+    top: 0;
+    left: 80px;
+    animation: rotator 4s linear infinite;
+}
+
+@keyframes rotator {
+    0%{
+        content: "C++";
+    }
+    20%{
+        content: "Python";
+    }
+    40%{
+        content: "JavaScript";
+    }
+    60%{
+        content: "HTML";
+    }
+    80%{
+        content: "CSS";
+    }
+    100%{
+        content: "C++";
+    }
+}

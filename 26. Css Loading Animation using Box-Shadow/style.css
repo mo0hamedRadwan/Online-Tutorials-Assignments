@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    /* border: 1px solid red; */
+    box-shadow: 5px 0px 0 red,
+                0px 5px 0 red,
+                -5px 0px 0 red,
+                0px -5px 0 red,
+                5px 5px 0 blue,
+                -5px 5px 0 blue,
+                5px -5px 0 blue,
+                -5px -5px 0 blue;
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 5px 0px 0 red,
+                0px 5px 0 red,
+                -5px 0px 0 red,
+                0px -5px 0 red,
+                5px 5px 0 blue,
+                -5px 5px 0 blue,
+                5px -5px 0 blue,
+                -5px -5px 0 blue;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 15px 0px 0 red,
+                0px 15px 0 red,
+                -15px 0px 0 red,
+                0px -15px 0 red,
+                10px 10px 0 blue,
+                -10px 10px 0 blue,
+                10px -10px 0 blue,
+                -10px -10px 0 blue;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 5px 0px 0 red,
+                0px 5px 0 red,
+                -5px 0px 0 red,
+                0px -5px 0 red,
+                5px 5px 0 blue,
+                -5px 5px 0 blue,
+                5px -5px 0 blue,
+                -5px -5px 0 blue;
+    }
+}

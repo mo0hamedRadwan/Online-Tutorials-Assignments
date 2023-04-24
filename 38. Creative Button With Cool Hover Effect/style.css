@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent a{
+    display: block;
+    text-decoration: none;
+    font-size: 30px;
+    background-color: #262626;
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 15px 60px;
+    transition: 0.5s;
+}
+
+.parent a:hover{
+    background-color: white;
+    color: #262626;
+    border: 5px solid #262626;
+}
